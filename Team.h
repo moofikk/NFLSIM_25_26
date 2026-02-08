@@ -85,16 +85,16 @@ public:
         careerTies += 1;
     }
 
-    int getSeasonWin() const {
-        return seasonWins;
+    string getSeasonWin() const {
+        return to_string(seasonWins);
     }
 
-    int getSeasonLoss() const {
-        return seasonLosses;
+    string getSeasonLoss() const {
+        return to_string(seasonLosses);
     }
 
-    int getSeasonTies() const {
-        return seasonTies;
+    string getSeasonTies() const {
+        return to_string(seasonTies);
     }
 
     float getWINPCT() const {

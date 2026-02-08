@@ -38,6 +38,9 @@ void Team::generateInitialRandomTeamRoster() {
         // Skip header if necessary
         std::getline(file, line); 
         while (std::getline(file, line)) {
+            if (line[line.length() - 1] == '\r') {
+                line.pop_back();
+            }
             if(!line.empty()) names.push_back(line);
         }
         return names;

@@ -260,6 +260,40 @@ void Game::runGame() {
         string secondInCurrentTeamDivision = std::format("{:^22}", teamsInDivision.at(1)->getName());
         string thirdInCurrentTeamDivision = std::format("{:^22}", teamsInDivision.at(2)->getName());
         string fourthInCurrentTeamDivision = std::format("{:^22}", teamsInDivision.at(3)->getName());
+        
+        string firstTeamInfo = teamsInDivision.at(0)->getSeasonWin() 
+                                + " - " + 
+                                teamsInDivision.at(0)->getSeasonLoss() 
+                                +  " - " 
+                                + teamsInDivision.at(0)->getSeasonLoss() 
+                                + " | W8 |  |";
+        string secondTeamInfo = teamsInDivision.at(1)->getSeasonWin() 
+                                + " - " + 
+                                teamsInDivision.at(1)->getSeasonLoss() 
+                                +  " - " 
+                                + teamsInDivision.at(1)->getSeasonLoss() 
+                                + " | W8 |  |";
+        string thirdTeamInfo = teamsInDivision.at(2)->getSeasonWin() 
+                                + " - " + 
+                                teamsInDivision.at(2)->getSeasonLoss() 
+                                +  " - " 
+                                + teamsInDivision.at(2)->getSeasonLoss() 
+                                + " | W8 |  |";
+        string fourthTeamInfo = teamsInDivision.at(3)->getSeasonWin() 
+                                + " - " + 
+                                teamsInDivision.at(3)->getSeasonLoss() 
+                                +  " - " 
+                                + teamsInDivision.at(3)->getSeasonLoss() 
+                                + " | W8 |  |";
+
+        string firstTeamInfoFormatted = 
+            std::format("{:^22}", firstTeamInfo);
+        string secondTeamInfoFormatted = 
+            std::format("{:^22}", secondTeamInfo);
+        string thirdTeamInfoFormatted = 
+            std::format("{:^22}", thirdTeamInfo);
+        string fourthTeamInfoFormatted = 
+            std::format("{:^22}", fourthTeamInfo);
 
         //while (!gameSimmed || !seasonSimmed) {
             std::cout << "*--------------------------------------------------------------------------------------------------------------------------------*" << endl;
@@ -273,10 +307,11 @@ void Game::runGame() {
             std::cout << "*                                                                                                                                *" << endl;
             std::cout << "*   " << standingsString << "(Best Player Name) Stats:       (Second Best Player Name) Stats:        *" << endl;
             std::cout << "*   ----------------------------------------------       -------------------------       ------------------------                *" << endl;
-            std::cout << "*   |" << firstInCurrentTeamDivision << "| " << teamsInDivision.at(0)->getSeasonWin() << " - " << teamsInDivision.at(0)->getSeasonLoss() << " - " << teamsInDivision.at(0)->getSeasonLoss() << " | W8 |  |       |           Stat 1      |       |           Stat 1      |               *" << endl;
-            std::cout << "*   |" << secondInCurrentTeamDivision  << "| " << teamsInDivision.at(1)->getSeasonWin() << " " << teamsInDivision.at(1)->getSeasonLoss() << " - " << teamsInDivision.at(0)->getSeasonLoss() << " | L1 |  |       |" << bestPlayerOVR << "              OVR      |       |   OVR        OVR      |               *" << endl;
-            std::cout << "*   |" << thirdInCurrentTeamDivision  << "| " << teamsInDivision.at(2)->getSeasonWin() << " - " << teamsInDivision.at(2)->getSeasonLoss() << " - " << teamsInDivision.at(0)->getSeasonLoss() << " | W1 |  |       |           Stat 2      |       |           Stat 2      |               *" << endl;
-            std::cout << "*   |" << fourthInCurrentTeamDivision  << "| " << teamsInDivision.at(3)->getSeasonWin() << " - " << teamsInDivision.at(3)->getSeasonLoss() << " - " << teamsInDivision.at(0)->getSeasonLoss() << " | L1 |  |       | Age:         OVR      |       | Age:         OVR      |               *" << endl; 
+            std::cout << "*   |" << firstInCurrentTeamDivision << "| " << firstTeamInfoFormatted << "       |           Stat 1      |       |           Stat 1      |               *" << endl;
+            std::cout << "*   |" << in_1st_division << "| " <<  << "       |           Stat 1      |       |           Stat 1      |               *" << endl;
+            std::cout << "*   |" << secondInCurrentTeamDivision  << "| " << firstTeamInfoFormatted << "       |" << bestPlayerOVR << "              OVR      |       |   OVR        OVR      |               *" << endl;
+            std::cout << "*   |" << thirdInCurrentTeamDivision  << "| " << firstTeamInfoFormatted << "       |           Stat 2      |       |           Stat 2      |               *" << endl;
+            std::cout << "*   |" << fourthInCurrentTeamDivision  << "| " << firstTeamInfoFormatted << "       | Age:         OVR      |       | Age:         OVR      |               *" << endl; 
             std::cout << "*   ----------------------------------------------       | #1 Stat:  Stat 3      |       | #1 Stat:  Stat 3      |               *" << endl;
             std::cout << "*   |     View Schedule, Conference, League,     |       |              OVR      |       |              OVR      |               *" << endl;
             std::cout << "*   |     Playoff Picture and Draft Order (W)    |       |                       |       |                       |               *" << endl;
